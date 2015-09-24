@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rango',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -67,6 +68,14 @@ TEMPLATES = [
         },
     },
 ]
+
+# ### Template settings from 'Tango with Django'
+# TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
+#
+# TEMPLATE_DIRS = (
+#     TEMPLATE_PATH,
+# )
+# ### END - Template settings ###
 
 WSGI_APPLICATION = 'TwD.wsgi.application'
 
@@ -99,4 +108,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+STATIC_PATH = os.path.join(BASE_DIR, 'static')
+
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = (
+    STATIC_PATH,
+)
+
+### MEDIA variable from TwD tutorial:
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+### End of MEDIA from TwD tutorial
