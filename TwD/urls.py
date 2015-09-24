@@ -13,10 +13,10 @@ urlpatterns = [
 ]
 
 # Bugs?
-if settings.DEBUG:
-    urlpatterns += [
-        'django.views.static',
-        (r'^media/(?P<path>.*)',
-        'serve',
-        {'document_root': settings.MEDIA_ROOT}),
-    ]
+# if settings.DEBUG:
+#     urlpatterns += [
+#         'django.views.static',
+#         (r'^media/(?P<path>.*)',
+#         'serve',
+#         {'document_root': settings.MEDIA_ROOT}),
+#     ]
